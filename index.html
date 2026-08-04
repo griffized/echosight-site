@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EchoSight — Deaf-first communication assistant for iPhone</title>
+<meta name="description" content="EchoSight gives Deaf and hard-of-hearing users private, live access to spoken communication — captions, two-way conversation, and saved transcripts, all on your iPhone. Nothing leaves your device.">
+<style>
+  :root{
+    --bg:#faf9f7; --surface:#ffffff; --ink:#1a1917; --ink-2:#57534e;
+    --accent:#8a4d1f; --accent-ink:#ffffff; --border:#e2ded8;
+    --focus:#1d4ed8;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0e0e14; --surface:#181822; --ink:#f2f0ed; --ink-2:#a8a29e;
+      --accent:#e8963f; --accent-ink:#181207; --border:#2c2c38;
+      --focus:#93c5fd;
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size:1.125rem; line-height:1.65;
+  }
+  .skip{position:absolute; left:-9999px; top:0; background:var(--accent); color:var(--accent-ink); padding:.6rem 1rem; border-radius:0 0 .5rem 0; z-index:10}
+  .skip:focus{left:0}
+  a{color:var(--accent)}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--focus); outline-offset:2px}
+  header,main,footer{max-width:44rem; margin:0 auto; padding:0 1.25rem}
+  header{padding-top:3.5rem}
+  .wordmark{font-size:1.05rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-2); margin:0 0 .75rem}
+  h1{font-size:clamp(1.9rem,5vw,2.7rem); line-height:1.15; margin:.25rem 0 1rem; letter-spacing:-.015em}
+  h2{font-size:1.5rem; margin:0 0 .75rem; letter-spacing:-.01em}
+  h3{font-size:1.15rem; margin:1.25rem 0 .4rem}
+  p{margin:.75rem 0}
+  .lead{font-size:1.25rem; color:var(--ink-2)}
+  nav[aria-label="Sections"]{margin:1.75rem 0 0}
+  nav[aria-label="Sections"] ul{list-style:none; padding:0; margin:0; display:flex; flex-wrap:wrap; gap:.5rem}
+  nav[aria-label="Sections"] a{
+    display:inline-block; padding:.45rem .9rem; border:1.5px solid var(--border);
+    border-radius:999px; text-decoration:none; color:var(--ink); font-weight:600; font-size:.95rem; background:var(--surface);
+  }
+  section{margin:3.25rem 0; scroll-margin-top:1.5rem}
+  .card{background:var(--surface); border:1.5px solid var(--border); border-radius:1rem; padding:1.5rem 1.5rem}
+  .cta{
+    display:inline-block; background:var(--accent); color:var(--accent-ink);
+    font-weight:700; text-decoration:none; padding:.85rem 1.5rem; border-radius:.75rem; font-size:1.1rem;
+  }
+  .note{font-size:.95rem; color:var(--ink-2)}
+  .update{border-left:4px solid var(--accent); padding:.25rem 0 .25rem 1.25rem; margin:1.75rem 0}
+  .update h3{margin-top:0}
+  .update .date{font-size:.9rem; color:var(--ink-2); font-weight:600; text-transform:uppercase; letter-spacing:.05em}
+  ul.features{padding-left:1.25rem}
+  ul.features li{margin:.5rem 0}
+  footer{padding:2.5rem 1.25rem 3.5rem; color:var(--ink-2); font-size:.95rem; border-top:1.5px solid var(--border); margin-top:4rem}
+  .promise{font-weight:700}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<header>
+  <p class="wordmark">EchoSight</p>
+  <h1>See the conversation. Join the conversation. Keep the conversation.</h1>
+  <p class="lead">EchoSight is a Deaf-first communication assistant for iPhone. Live captions, two-way face-to-face conversation, and saved transcripts — all processed on your phone. No account. No cloud. No transcript ever leaves your device.</p>
+  <nav aria-label="Sections">
+    <ul>
+      <li><a href="#about">Why I built this</a></li>
+      <li><a href="#modes">What it does</a></li>
+      <li><a href="#beta">Join the beta</a></li>
+      <li><a href="#updates">Beta updates</a></li>
+      <li><a href="#privacy">Privacy</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+<section id="about" aria-labelledby="about-h">
+  <h2 id="about-h">Why I built this</h2>
+  <p>Hi — I'm Frank. I'm Deaf. Like a lot of us, my phone is full of apps that each do one piece of a conversation: one app captions, another one speaks for me, a third one keeps notes. Switching between them in the middle of a real conversation — at a counter, in a meeting, at a doctor's office — means missing the conversation itself.</p>
+  <p>EchoSight puts the whole conversation on one screen: what they're saying, what I want to say back, and a saved record I can return to later. It works with no internet connection, and everything stays on the phone.</p>
+  <p>It's in active beta testing now, shaped directly by feedback from Deaf and hard-of-hearing testers. If that's you — or someone you talk with — I'd love your help making it better.</p>
+</section>
+
+<section id="modes" aria-labelledby="modes-h">
+  <h2 id="modes-h">What it does today</h2>
+
+  <div class="card">
+    <h3>Echo Mode — meetings, classes, appointments</h3>
+    <ul class="features">
+      <li>Live captions of everything said, saved as a full-session transcript you can scroll back through and export</li>
+      <li>Survives interruptions: phone calls, Siri, switching earbuds — captions come back on their own, and if anything stalls you see a banner, never silence</li>
+      <li>Name alerts: your phone vibrates when your name is spoken</li>
+      <li>Audio status at a glance: Bluetooth mic connected, background noise high, poor audio — plus placement tips for best results</li>
+      <li>AI wrap-up on supported iPhones: summary, action items, and decisions — generated on your device</li>
+    </ul>
+  </div>
+
+  <div class="card" style="margin-top:1rem">
+    <h3>Conversation Mode — face to face</h3>
+    <ul class="features">
+      <li>Their words captioned on top, your side in big text below — one screen, two directions, hand the phone back and forth or just turn it around</li>
+      <li>Type or tap a quick phrase; EchoSight can speak it out loud in a natural voice, at the speed you choose</li>
+      <li>Smart reply suggestions when someone asks you a question — including the actual choices when it's a "this or that?" question</li>
+      <li>Quick-phrase packs for restaurants, medical visits, work, travel, emergencies — plus phrases it learns you use often</li>
+      <li>Volume stays in your control: EchoSight never changes your volume by itself</li>
+    </ul>
+  </div>
+
+  <p class="note">EchoSight supports communication access. It is not a replacement for a qualified interpreter or CART services, and it will always say so.</p>
+</section>
+
+<section id="beta" aria-labelledby="beta-h">
+  <h2 id="beta-h">Join the beta</h2>
+  <div class="card">
+    <p>EchoSight is free to test through Apple's TestFlight. You'll need an iPhone (iOS 17.6 or newer). Install TestFlight from the App Store, then tap the invite link:</p>
+    <p><a class="cta" href="#beta">Beta invite link coming very soon</a></p>
+    <p class="note">Until the public link is live, email me and I'll add you directly: <a href="mailto:frank@griffized.com">frank@griffized.com</a></p>
+    <p>What being a tester means: use EchoSight in your real life — work, school, errands, family — and tell me what worked and what didn't. Screenshots and saved transcripts are gold. Every update below exists because a tester spoke up.</p>
+  </div>
+</section>
+
+<section id="updates" aria-labelledby="updates-h">
+  <h2 id="updates-h">Beta updates &amp; what to test</h2>
+  <p class="note">Newest first. Each update lists what changed and what testers should try.</p>
+
+  <article class="update">
+    <p class="date">August 6, 2026</p>
+    <h3>Beta 2.0 — the reliability release</h3>
+    <p><strong>What's new:</strong> Captions survive phone calls, Siri, and earbud switching. No more silent failures — a stall shows a banner and a tap restarts it, with your transcript always safe (even through a crash or force-quit). Cleaner captions with no duplicated sentences. Faster, smarter reply suggestions that match the question asked. Volume boost is now opt-in with a visible slider — the app never touches volume behind your back. New audio status chips, a "Best Results" placement guide, and a voice-speed setting.</p>
+    <p><strong>Please test:</strong> a real meeting or class of 30+ minutes; reply suggestions in a live back-and-forth; connecting and disconnecting AirPods mid-session; force-quitting mid-session (your transcript should be complete in saved sessions). Report stall banners, duplicated captions, wrong or slow suggestions, and battery use after long sessions.</p>
+  </article>
+</section>
+
+<section id="privacy" aria-labelledby="privacy-h">
+  <h2 id="privacy-h">Privacy</h2>
+  <div class="card">
+    <p class="promise">Private by default. No transcript leaves your device.</p>
+    <p>EchoSight's captioning, speech, and AI features run entirely on your iPhone. There are no accounts, no servers, and no network connection required — the app works in airplane mode. Your transcripts are stored only on your phone, you decide what to keep, and export happens only when you choose it.</p>
+    <p>EchoSight includes offline and local-only operation designed to support privacy-sensitive use. Whether use is appropriate in any specific setting — under HIPAA, FERPA, workplace, school, or clinical policies — remains the responsibility of users and their institutions.</p>
+    <p class="note">Questions about privacy, or anything else: <a href="mailto:frank@griffized.com">frank@griffized.com</a></p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>EchoSight is built by a Deaf developer, tested by the Deaf and hard-of-hearing community, and designed so the burden of communication access doesn't fall on the person with the disability.</p>
+  <p>© 2026 Frank Griffin · <a href="mailto:frank@griffized.com">frank@griffized.com</a></p>
+</footer>
+
+</body>
+</html>
