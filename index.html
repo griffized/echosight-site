@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EchoSight — Deaf-first communication assistant for iPhone</title>
-<meta name="description" content="EchoSight gives Deaf and hard-of-hearing users private, live access to spoken communication — captions, two-way conversation, and saved transcripts, all on your iPhone. Nothing leaves your device.">
+<title>EchoSight: Deaf-first communication assistant for iPhone</title>
+<meta name="description" content="EchoSight gives Deaf and hard-of-hearing users private, live access to spoken communication: captions, two-way conversation, and saved transcripts, all on your iPhone. Nothing leaves your device.">
 <style>
   :root{
     --bg:#faf9f7; --surface:#ffffff; --ink:#1a1917; --ink-2:#57534e;
@@ -44,7 +44,8 @@
     border-radius:999px; text-decoration:none; color:var(--ink); font-weight:600; font-size:.95rem; background:var(--surface);
   }
   section{margin:3.25rem 0; scroll-margin-top:1.5rem}
-  .card{background:var(--surface); border:1.5px solid var(--border); border-radius:1rem; padding:1.5rem 1.5rem}
+  .card{background:var(--surface); border:1.5px solid var(--border); border-radius:1rem; padding:1.5rem 1.5rem; margin-top:1rem}
+  .card h3:first-child{margin-top:0}
   .cta{
     display:inline-block; background:var(--accent); color:var(--accent-ink);
     font-weight:700; text-decoration:none; padding:.85rem 1.5rem; border-radius:.75rem; font-size:1.1rem;
@@ -65,13 +66,15 @@
 <header>
   <p class="wordmark">EchoSight</p>
   <h1>See the conversation. Join the conversation. Keep the conversation.</h1>
-  <p class="lead">EchoSight is a Deaf-first communication assistant for iPhone. Live captions, two-way face-to-face conversation, and saved transcripts — all processed on your phone. No account. No cloud. No transcript ever leaves your device.</p>
+  <p class="lead">EchoSight is a Deaf-first communication assistant for iPhone. Live captions, two-way face-to-face conversation, and saved transcripts, all processed on your phone. No account. No cloud. No transcript ever leaves your device.</p>
   <nav aria-label="Sections">
     <ul>
       <li><a href="#about">Why I built this</a></li>
       <li><a href="#modes">What it does</a></li>
       <li><a href="#beta">Join the beta</a></li>
+      <li><a href="#howtotest">How to test</a></li>
       <li><a href="#updates">Beta updates</a></li>
+      <li><a href="#wishlist">Wish list</a></li>
       <li><a href="#privacy">Privacy</a></li>
     </ul>
   </nav>
@@ -81,32 +84,33 @@
 
 <section id="about" aria-labelledby="about-h">
   <h2 id="about-h">Why I built this</h2>
-  <p>Hi — I'm Frank. I'm Deaf. Like a lot of us, my phone is full of apps that each do one piece of a conversation: one app captions, another one speaks for me, a third one keeps notes. Switching between them in the middle of a real conversation — at a counter, in a meeting, at a doctor's office — means missing the conversation itself.</p>
+  <p>Hi, I'm Frank. I'm Deaf. Like a lot of us, my phone is full of apps that each do one piece of a conversation: one app captions, another one speaks for me, a third one keeps notes. Switching between them in the middle of a real conversation, whether at a counter, in a meeting, or at a doctor's office, means missing the conversation itself.</p>
   <p>EchoSight puts the whole conversation on one screen: what they're saying, what I want to say back, and a saved record I can return to later. It works with no internet connection, and everything stays on the phone.</p>
-  <p>It's in active beta testing now, shaped directly by feedback from Deaf and hard-of-hearing testers. If that's you — or someone you talk with — I'd love your help making it better.</p>
+  <p>It's in active beta testing now, shaped directly by feedback from Deaf and hard-of-hearing testers. If that's you, or someone you talk with, I'd love your help making it better.</p>
 </section>
 
 <section id="modes" aria-labelledby="modes-h">
   <h2 id="modes-h">What it does today</h2>
 
   <div class="card">
-    <h3>Echo Mode — meetings, classes, appointments</h3>
+    <h3>Meeting Mode: meetings, classes, appointments</h3>
+    <p class="note">(Being renamed "Echo Mode" in an upcoming update.)</p>
     <ul class="features">
       <li>Live captions of everything said, saved as a full-session transcript you can scroll back through and export</li>
-      <li>Survives interruptions: phone calls, Siri, switching earbuds — captions come back on their own, and if anything stalls you see a banner, never silence</li>
+      <li>Survives interruptions: phone calls, Siri, switching earbuds. Captions come back on their own, and if anything stalls you see a banner, never silence</li>
       <li>Name alerts: your phone vibrates when your name is spoken</li>
-      <li>Audio status at a glance: Bluetooth mic connected, background noise high, poor audio — plus placement tips for best results</li>
-      <li>AI wrap-up on supported iPhones: summary, action items, and decisions — generated on your device</li>
+      <li>Audio status at a glance: Bluetooth mic connected, background noise high, poor audio, plus placement tips for best results</li>
+      <li>AI wrap-up on supported iPhones: summary, action items, and decisions, generated on your device</li>
     </ul>
   </div>
 
-  <div class="card" style="margin-top:1rem">
-    <h3>Conversation Mode — face to face</h3>
+  <div class="card">
+    <h3>Conversation Mode: face to face</h3>
     <ul class="features">
-      <li>Their words captioned on top, your side in big text below — one screen, two directions, hand the phone back and forth or just turn it around</li>
+      <li>Their words captioned on top, your side in big text below. One screen, two directions</li>
       <li>Type or tap a quick phrase; EchoSight can speak it out loud in a natural voice, at the speed you choose</li>
-      <li>Smart reply suggestions when someone asks you a question — including the actual choices when it's a "this or that?" question</li>
-      <li>Quick-phrase packs for restaurants, medical visits, work, travel, emergencies — plus phrases it learns you use often</li>
+      <li>Smart reply suggestions when someone asks you a question, including the actual choices when it's a "this or that?" question</li>
+      <li>Quick-phrase packs for restaurants, medical visits, work, travel, and emergencies, plus phrases it learns you use often</li>
       <li>Volume stays in your control: EchoSight never changes your volume by itself</li>
     </ul>
   </div>
@@ -120,7 +124,51 @@
     <p>EchoSight is free to test through Apple's TestFlight. You'll need an iPhone (iOS 17.6 or newer). Install TestFlight from the App Store, then tap the invite link:</p>
     <p><a class="cta" href="#beta">Beta invite link coming very soon</a></p>
     <p class="note">Until the public link is live, email me and I'll add you directly: <a href="mailto:frank@griffized.com">frank@griffized.com</a></p>
-    <p>What being a tester means: use EchoSight in your real life — work, school, errands, family — and tell me what worked and what didn't. Screenshots and saved transcripts are gold. Every update below exists because a tester spoke up.</p>
+    <p>What being a tester means: use EchoSight in your real life, at work, school, errands, and with family, then tell me what worked and what didn't. Screenshots and saved transcripts are gold. Every update below exists because a tester spoke up.</p>
+  </div>
+</section>
+
+<section id="howtotest" aria-labelledby="howtotest-h">
+  <h2 id="howtotest-h">How to test: real scenarios</h2>
+  <p>Pick the scenarios that match your life. You don't need to do all of them. One honest report from one real situation is worth more than an hour of artificial testing.</p>
+
+  <div class="card">
+    <h3>The lecture or long meeting</h3>
+    <p>Start Meeting Mode for a class, staff meeting, church service, or even a long YouTube lecture. Let it run 30 minutes or more. Scroll back while it's still captioning, then jump back to live. When it ends, check the saved session and try the AI wrap-up.</p>
+    <p class="note">Tell me: did captions keep up the whole time? Did anything stall? How was your battery afterward?</p>
+  </div>
+
+  <div class="card">
+    <h3>The counter conversation</h3>
+    <p>Use Conversation Mode somewhere real: ordering food, asking a store employee for help, a pharmacy pickup. Try the reply suggestions when they ask you a question, and try speak-aloud so the phone talks for you.</p>
+    <p class="note">Tell me: were suggestions fast enough to actually use? Did they fit the question? Did the other person understand the spoken voice?</p>
+  </div>
+
+  <div class="card">
+    <h3>The interruption test</h3>
+    <p>While captioning, have someone call you. Take the call, hang up, and watch whether captions come back on their own. Also try: switching to AirPods mid-session, letting the phone lock, and force-quitting the app mid-meeting (then check saved sessions; your transcript should be complete).</p>
+  </div>
+
+  <div class="card">
+    <h3>The name test</h3>
+    <p>In Settings, enter your name plus any ways people mispronounce it or ways captions misspell it (the "also known as" field). Then have someone say your name across the room while Meeting Mode runs. Your phone should vibrate.</p>
+  </div>
+
+  <div class="card">
+    <h3>The vocabulary test</h3>
+    <p>Settings has a Personal Word Bank. Add names and words captions keep getting wrong: your coworkers, your medications, your school's buildings, community terms. Then have someone use those words in conversation and see if captions improve.</p>
+  </div>
+
+  <div class="card">
+    <h3>Quick-launch tricks (try them all)</h3>
+    <ul class="features">
+      <li><strong>Widgets:</strong> touch and hold your home screen, tap the plus button, search "EchoSight." There are widgets for the home screen and the lock screen that launch straight into either mode</li>
+      <li><strong>Action Button</strong> (iPhone 15 Pro and newer): Settings app, Action Button, choose Shortcut, pick "Start a Conversation" or "Start a Meeting." One press starts captioning from your pocket</li>
+      <li><strong>Siri and Spotlight:</strong> "Start a conversation in EchoSight" or "Start a meeting in EchoSight" works from Siri, and both appear when you search in Spotlight</li>
+      <li><strong>Quick phrases:</strong> in Conversation Mode, open the phrases panel. Install a scenario pack (Restaurant, Doctor and Pharmacy, Travel, Emergency and more). Send the same message three times and EchoSight offers to save it as a phrase</li>
+      <li><strong>The hearing-person sheet:</strong> the person icon at the top of Conversation Mode gathers everything meant for the other person in one place</li>
+      <li><strong>Themes:</strong> Settings offers dark and sepia. Sepia exists because testers asked for dark text on warm paper. Try both in daylight</li>
+    </ul>
   </div>
 </section>
 
@@ -130,18 +178,30 @@
 
   <article class="update">
     <p class="date">August 6, 2026</p>
-    <h3>Beta 2.0 — the reliability release</h3>
-    <p><strong>What's new:</strong> Captions survive phone calls, Siri, and earbud switching. No more silent failures — a stall shows a banner and a tap restarts it, with your transcript always safe (even through a crash or force-quit). Cleaner captions with no duplicated sentences. Faster, smarter reply suggestions that match the question asked. Volume boost is now opt-in with a visible slider — the app never touches volume behind your back. New audio status chips, a "Best Results" placement guide, and a voice-speed setting.</p>
+    <h3>Beta 2.0: the reliability release</h3>
+    <p><strong>What's new:</strong> Captions survive phone calls, Siri, and earbud switching. No more silent failures: a stall shows a banner, a tap restarts it, and your transcript stays safe even through a crash or force-quit. Cleaner captions with no duplicated sentences. Faster, smarter reply suggestions that match the question asked. Volume boost is now opt-in with a visible slider; the app never touches volume behind your back. New audio status chips, a "Best Results" placement guide, and a voice-speed setting.</p>
     <p><strong>Please test:</strong> a real meeting or class of 30+ minutes; reply suggestions in a live back-and-forth; connecting and disconnecting AirPods mid-session; force-quitting mid-session (your transcript should be complete in saved sessions). Report stall banners, duplicated captions, wrong or slow suggestions, and battery use after long sessions.</p>
   </article>
+</section>
+
+<section id="wishlist" aria-labelledby="wishlist-h">
+  <h2 id="wishlist-h">Wish list: tell me what you want</h2>
+  <div class="card">
+    <p>Bug reports keep the app working. Wishes decide what it becomes. If you've ever thought "I wish it could just…", I want that sentence, however rough.</p>
+    <p>Things testers and community members have already asked about, to get you thinking: speaker labels with colors in group conversations, captions for sounds (a knock, an alarm, laughter), live translation between languages, importing your saved phrases from other apps, and an iPad version.</p>
+    <p>One question I'm weighing right now and would love your take on: <strong>optional cloud-powered AI.</strong> Everything today runs on your phone, and the private, offline core will always stay that way. But some things, like deeper meeting summaries, asking questions about a saved transcript, or smarter reply suggestions, could get much better with more powerful AI in the cloud, strictly opt-in, per session, with a clear view of what gets sent and the ability to delete it. Would you use that? Never touch it? Only in some settings? Your answer shapes what I build next.</p>
+    <p><a class="cta" href="mailto:frank@griffized.com?subject=EchoSight%20wish%20list">Send me your wish list</a></p>
+    <p class="note">Plain email, no forms, no accounts. Every wish gets read and logged, and the updates section above will show you when one ships.</p>
+  </div>
 </section>
 
 <section id="privacy" aria-labelledby="privacy-h">
   <h2 id="privacy-h">Privacy</h2>
   <div class="card">
     <p class="promise">Private by default. No transcript leaves your device.</p>
-    <p>EchoSight's captioning, speech, and AI features run entirely on your iPhone. There are no accounts, no servers, and no network connection required — the app works in airplane mode. Your transcripts are stored only on your phone, you decide what to keep, and export happens only when you choose it.</p>
-    <p>EchoSight includes offline and local-only operation designed to support privacy-sensitive use. Whether use is appropriate in any specific setting — under HIPAA, FERPA, workplace, school, or clinical policies — remains the responsibility of users and their institutions.</p>
+    <p>EchoSight's captioning, speech, and AI features run entirely on your iPhone. There are no accounts, no servers, and no network connection required; the app works in airplane mode. Your transcripts are stored only on your phone, you decide what to keep, and export happens only when you choose it.</p>
+    <p>EchoSight includes offline and local-only operation designed to support privacy-sensitive use. Whether use is appropriate in any specific setting, under HIPAA, FERPA, workplace, school, or clinical policies, remains the responsibility of users and their institutions.</p>
+    <p>If optional cloud features ever ship, they will be exactly that: optional, off by default, opt-in per session, with plain-language disclosure of what is sent and user-controlled deletion. The offline core will never require them.</p>
     <p class="note">Questions about privacy, or anything else: <a href="mailto:frank@griffized.com">frank@griffized.com</a></p>
   </div>
 </section>
