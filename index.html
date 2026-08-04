@@ -190,8 +190,36 @@
     <p>Bug reports keep the app working. Wishes decide what it becomes. If you've ever thought "I wish it could just…", I want that sentence, however rough.</p>
     <p>Things testers and community members have already asked about, to get you thinking: speaker labels with colors in group conversations, captions for sounds (a knock, an alarm, laughter), live translation between languages, importing your saved phrases from other apps, and an iPad version.</p>
     <p>One question I'm weighing right now and would love your take on: <strong>optional cloud-powered AI.</strong> Everything today runs on your phone, and the private, offline core will always stay that way. But some things, like deeper meeting summaries, asking questions about a saved transcript, or smarter reply suggestions, could get much better with more powerful AI in the cloud, strictly opt-in, per session, with a clear view of what gets sent and the ability to delete it. Would you use that? Never touch it? Only in some settings? Your answer shapes what I build next.</p>
-    <p><a class="cta" href="mailto:frank@griffized.com?subject=EchoSight%20wish%20list">Send me your wish list</a></p>
-    <p class="note">Plain email, no forms, no accounts. Every wish gets read and logged, and the updates section above will show you when one ships.</p>
+    <form action="https://formsubmit.co/frank@griffized.com" method="POST" aria-label="Wish list submission">
+      <input type="hidden" name="_subject" value="EchoSight wish list">
+      <input type="hidden" name="_next" value="https://griffized.github.io/echosight-site/?sent=1#wishlist">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <p>
+        <label for="wish-name" style="display:block; font-weight:600; margin-bottom:.3rem">Your name <span class="note">(optional)</span></label>
+        <input id="wish-name" name="name" type="text" autocomplete="name"
+          style="width:100%; padding:.7rem .8rem; font-size:1.05rem; border:1.5px solid var(--border); border-radius:.6rem; background:var(--bg); color:var(--ink)">
+      </p>
+      <p>
+        <label for="wish-email" style="display:block; font-weight:600; margin-bottom:.3rem">Your email <span class="note">(optional, only if you want a reply)</span></label>
+        <input id="wish-email" name="email" type="email" autocomplete="email"
+          style="width:100%; padding:.7rem .8rem; font-size:1.05rem; border:1.5px solid var(--border); border-radius:.6rem; background:var(--bg); color:var(--ink)">
+      </p>
+      <p>
+        <label for="wish-text" style="display:block; font-weight:600; margin-bottom:.3rem">Your wish</label>
+        <textarea id="wish-text" name="wish" required rows="5"
+          placeholder="I wish EchoSight could…"
+          style="width:100%; padding:.7rem .8rem; font-size:1.05rem; border:1.5px solid var(--border); border-radius:.6rem; background:var(--bg); color:var(--ink); font-family:inherit; resize:vertical"></textarea>
+      </p>
+      <p><button class="cta" type="submit" style="border:none; cursor:pointer; font-family:inherit">Send my wish</button></p>
+    </form>
+    <p id="wish-thanks" hidden style="font-weight:700">Got it. Thank you! Your wish is on its way to me. Watch the updates section to see it ship.</p>
+    <p class="note">No account needed. Submissions are delivered by email through formsubmit.co. Prefer plain email? <a href="mailto:frank@griffized.com?subject=EchoSight%20wish%20list">That works too.</a> Every wish gets read and logged, and the updates section above will show you when one ships.</p>
+    <script>
+      if (new URLSearchParams(location.search).get('sent') === '1') {
+        document.getElementById('wish-thanks').hidden = false;
+      }
+    </script>
   </div>
 </section>
 
