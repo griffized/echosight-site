@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EchoSight Changelog: every beta update and hotfix</title>
+<meta name="description" content="A running log of every EchoSight beta release and hotfix: what changed, why, and what testers should try.">
+<style>
+  :root{
+    --bg:#faf9f7; --surface:#ffffff; --ink:#1a1917; --ink-2:#57534e;
+    --accent:#8a4d1f; --accent-ink:#ffffff; --border:#e2ded8;
+    --focus:#1d4ed8;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0e0e14; --surface:#181822; --ink:#f2f0ed; --ink-2:#a8a29e;
+      --accent:#e8963f; --accent-ink:#181207; --border:#2c2c38;
+      --focus:#93c5fd;
+    }
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size:1.125rem; line-height:1.65;
+  }
+  .skip{position:absolute; left:-9999px; top:0; background:var(--accent); color:var(--accent-ink); padding:.6rem 1rem; border-radius:0 0 .5rem 0; z-index:10}
+  .skip:focus{left:0}
+  a{color:var(--accent)}
+  a:focus-visible{outline:3px solid var(--focus); outline-offset:2px}
+  header,main,footer{max-width:44rem; margin:0 auto; padding:0 1.25rem}
+  header{padding-top:3rem}
+  .wordmark{font-size:1.05rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-2); margin:0 0 .75rem}
+  .wordmark a{color:inherit; text-decoration:none}
+  h1{font-size:clamp(1.7rem,4.5vw,2.3rem); line-height:1.15; margin:.25rem 0 .75rem; letter-spacing:-.015em}
+  h2{font-size:1.35rem; margin:0 0 .5rem; letter-spacing:-.01em}
+  p{margin:.75rem 0}
+  .lead{font-size:1.15rem; color:var(--ink-2)}
+  .note{font-size:.95rem; color:var(--ink-2)}
+  .back{display:inline-block; margin:.5rem 0 0; font-weight:600}
+  article{
+    background:var(--surface); border:1.5px solid var(--border); border-radius:1rem;
+    padding:1.5rem; margin:1.5rem 0;
+  }
+  article h2{margin-top:0}
+  .meta{font-size:.9rem; color:var(--ink-2); font-weight:600; text-transform:uppercase; letter-spacing:.05em; margin:0 0 .25rem}
+  .tag{
+    display:inline-block; font-size:.8rem; font-weight:700; padding:.15rem .6rem;
+    border-radius:999px; border:1.5px solid var(--accent); color:var(--accent);
+    vertical-align:middle; margin-left:.4rem; text-transform:uppercase; letter-spacing:.04em;
+  }
+  ul{padding-left:1.25rem}
+  li{margin:.4rem 0}
+  footer{padding:2.5rem 1.25rem 3.5rem; color:var(--ink-2); font-size:.95rem; border-top:1.5px solid var(--border); margin-top:3rem}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<header>
+  <p class="wordmark"><a href="index.html">EchoSight</a></p>
+  <h1>Changelog</h1>
+  <p class="lead">Every beta release and hotfix, newest first: what changed, why it changed, and what to test. Most entries exist because a tester spoke up.</p>
+  <p class="back"><a href="index.html">&larr; Back to the main page</a></p>
+</header>
+
+<main id="main">
+
+<article>
+  <p class="meta">August 6, 2026 <span class="tag">Hotfix</span></p>
+  <h2>Beta 2.0.1: captions, fast</h2>
+  <p><strong>Why:</strong> testers told us captions felt slower than other apps, and that quiet moments made it hard to trust the app was hearing anything at all. They were right.</p>
+  <p><strong>What changed:</strong></p>
+  <ul>
+    <li>Captions now appear the moment words are recognized. Fast is the new default for everyone</li>
+    <li>New "hearing you" indicator: live sound-level bars show the app is picking up audio, even before any words appear</li>
+    <li>A "Getting ready" message covers the first seconds while the captioning engine starts up</li>
+    <li>Prefer the smoother, steadier display from 2.0? It's one switch away: Settings, Caption speed, Steady</li>
+  </ul>
+  <p><strong>Please test:</strong> does the app feel alive from the very first second? If you compared us to another captioning app before, please compare again and tell me which felt faster.</p>
+</article>
+
+<article>
+  <p class="meta">August 6, 2026 <span class="tag">Major update</span></p>
+  <h2>Beta 2.0: the reliability release</h2>
+  <p><strong>Why:</strong> a captioning app you can't trust to keep running isn't an accessibility tool. This release was several weeks of work on one theme: captions that never silently die.</p>
+  <p><strong>What changed:</strong></p>
+  <ul>
+    <li>Captions survive interruptions: phone calls, Siri, and switching earbuds mid-session. They come back on their own</li>
+    <li>No silent failures: if transcription ever stalls, a banner appears and one tap restarts it</li>
+    <li>Crash-safe transcripts: even a crash or force-quit loses at most the sentence in progress. Everything else is already saved</li>
+    <li>Cleaner captions: duplicated sentences and stray one-word fragments are gone</li>
+    <li>Smarter reply suggestions: faster, matched to the question actually asked, and "this or that?" questions now offer the actual choices</li>
+    <li>Volume is yours: the automatic volume boost is removed. Helping with volume is now opt-in, with a visible slider, in Settings under Conversation audio</li>
+    <li>New voice-speed setting for spoken messages</li>
+    <li>Audio status chips in meeting mode: Bluetooth mic connected, background noise high, poor audio</li>
+    <li>A "Best Results" guide for device placement in rooms and classrooms</li>
+  </ul>
+  <p><strong>Please test:</strong> a real meeting or class of 30+ minutes, reply suggestions in a live conversation, earbud switching mid-session, and force-quitting mid-session (your transcript should be complete in saved sessions).</p>
+</article>
+
+<article>
+  <p class="meta">Earlier, 2026</p>
+  <h2>Beta 1.x: the foundation</h2>
+  <p>The first betas, tested with family and friends: live on-device captioning, Meeting Mode with full-session transcripts and AI wrap-up, Conversation Mode with the two-sided screen and speak-aloud, quick phrases with scenario packs, name alerts, personal word bank, saved sessions, widgets, Siri shortcuts, and the Action Button. Everything on the phone, nothing in the cloud. Those testers' reports shaped everything above.</p>
+</article>
+
+</main>
+
+<footer>
+  <p>Want to shape the next entry? <a href="index.html#wishlist">Send a wish</a> or <a href="index.html#beta">join the beta</a>.</p>
+  <p>© 2026 Frank Griffin · <a href="mailto:frank@griffized.com">frank@griffized.com</a></p>
+</footer>
+
+</body>
+</html>
