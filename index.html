@@ -19,7 +19,9 @@
     }
   }
   *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: no-preference){
+    html{scroll-behavior:smooth}
+  }
   body{
     margin:0; background:var(--bg); color:var(--ink);
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
@@ -58,10 +60,57 @@
   ul.features li{margin:.5rem 0}
   footer{padding:2.5rem 1.25rem 3.5rem; color:var(--ink-2); font-size:.95rem; border-top:1.5px solid var(--border); margin-top:4rem}
   .promise{font-weight:700}
+
+  /* ---- Left navigation panel (wide screens only) ---- */
+  .sidenav{display:none}
+  @media (min-width: 1200px){
+    .sidenav{
+      display:block; position:fixed; top:3.5rem;
+      left:max(1.5rem, calc(50vw - 22rem - 16.5rem));
+      width:14.5rem; max-height:calc(100vh - 5rem); overflow-y:auto;
+    }
+    .sidenav h2{
+      font-size:.8rem; font-weight:700; text-transform:uppercase;
+      letter-spacing:.08em; color:var(--ink-2); margin:0 0 .6rem;
+    }
+    .sidenav ul{list-style:none; margin:0; padding:0}
+    .sidenav li{margin:0}
+    .sidenav a{
+      display:block; padding:.42rem .75rem; border-radius:.5rem;
+      text-decoration:none; color:var(--ink-2); font-size:.95rem; font-weight:600;
+      border-left:3px solid transparent;
+    }
+    .sidenav a:hover{color:var(--ink); background:var(--surface)}
+    .sidenav a[aria-current="true"]{
+      color:var(--accent); background:var(--surface);
+      border-left-color:var(--accent); border-radius:0 .5rem .5rem 0;
+    }
+    .sidenav .ext{font-weight:600; font-size:.9rem; margin-top:.6rem;
+      padding-top:.6rem; border-top:1.5px solid var(--border)}
+    /* the pill nav is redundant when the panel is visible */
+    nav[aria-label="Sections"]{display:none}
+    section{scroll-margin-top:2.5rem}
+  }
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
+
+<nav class="sidenav" aria-label="On this page">
+  <h2>On this page</h2>
+  <ul>
+    <li><a href="#about">Why I built this</a></li>
+    <li><a href="#modes">What it does</a></li>
+    <li><a href="#features">Feature tour</a></li>
+    <li><a href="#beta">Join the beta</a></li>
+    <li><a href="#howtotest">How to test</a></li>
+    <li><a href="#updates">Latest update</a></li>
+    <li><a href="#fixes">Fixes to come</a></li>
+    <li><a href="#wishlist">Wish list</a></li>
+    <li><a href="#privacy">Privacy</a></li>
+    <li class="ext"><a href="changelog.html">Full changelog →</a></li>
+  </ul>
+</nav>
 
 <header>
   <p class="wordmark">EchoSight</p>
@@ -71,8 +120,10 @@
     <ul>
       <li><a href="#about">Why I built this</a></li>
       <li><a href="#modes">What it does</a></li>
+      <li><a href="#features">Feature tour</a></li>
       <li><a href="#beta">Join the beta</a></li>
       <li><a href="#howtotest">How to test</a></li>
+      <li><a href="#fixes">Fixes to come</a></li>
       <li><a href="changelog.html">Changelog</a></li>
       <li><a href="#wishlist">Wish list</a></li>
       <li><a href="#privacy">Privacy</a></li>
@@ -116,6 +167,51 @@
   </div>
 
   <p class="note">EchoSight supports communication access. It is not a replacement for a qualified interpreter or CART services, and it will always say so.</p>
+</section>
+
+<section id="features" aria-labelledby="features-h">
+  <h2 id="features-h">Feature tour: everything, including the easy-to-miss</h2>
+  <p>The in-app tutorial is short on purpose, which means some of the best features are ones you'd only find by poking around. This is the complete list of what's in your hands today. If something here surprises you, that's exactly the feedback I want.</p>
+
+  <div class="card">
+    <h3>In Conversation Mode</h3>
+    <ul class="features">
+      <li><strong>Big text, both directions:</strong> their words captioned live on top, your side displayed large below — one screen, no app switching</li>
+      <li><strong>Speak or show:</strong> every message can display silently or be spoken aloud in a natural voice. A chip under the Send button always shows which will happen; tap it to switch</li>
+      <li><strong>See the speech as it happens:</strong> when EchoSight speaks for you, a word-by-word highlight shows exactly where the voice is in your sentence, so you know when it's done</li>
+      <li><strong>Reply ideas:</strong> when someone asks you a question, tap the sparkles for suggested replies, generated on your phone</li>
+      <li><strong>The wand:</strong> optional writing help that rewords your draft into natural conversational English for a hearing listener — your meaning, your tone, smoother delivery. On your phone, off by default</li>
+      <li><strong>Quick phrases and scenario packs:</strong> saved one-tap messages, with ready-made packs for restaurants, medical visits, errands, work, travel, and emergencies. Send the same message three times and EchoSight offers to save it</li>
+      <li><strong>Long-press any bubble</strong> to speak it again (they didn't hear it) or copy it</li>
+      <li><strong>Tools for the hearing person</strong> under the person icon: an on-screen explanation of the app, a "please pause while I read" banner, and "Let them type" — hand the phone over and their typed words join their side of the transcript</li>
+      <li><strong>Volume and mic status, honestly shown:</strong> a banner with a real slider if your volume is too low to be heard, and a clear "mic paused while speaking" vs "still listening" state. EchoSight never changes your volume by itself</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>In Meeting Mode</h3>
+    <ul class="features">
+      <li><strong>Captions that go the distance:</strong> continuous on-device transcription, validated on a three-hour unbroken session — over 32,000 words, one transcript</li>
+      <li><strong>Caption speed, your choice:</strong> Fast shows words the instant they're recognized and cleans them up in place; Steady waits until text is settled so it never changes under your eyes</li>
+      <li><strong>"Hearing you" indicator:</strong> a live mic-level animation, so a quiet room never looks like a dead app</li>
+      <li><strong>Scroll back freely:</strong> reading history never stops the captions — a jump-to-live button brings you back</li>
+      <li><strong>Name alerts:</strong> a strong vibration when your name is spoken, including the ways people mispronounce it (you teach it the variants)</li>
+      <li><strong>AI wrap-up:</strong> summary, key points, action items, and decisions at session end — or generate one later from History. Made on your phone, never uploaded</li>
+      <li><strong>Audio status chips:</strong> Bluetooth mic connected, too much noise, speaker may be too far — plus a Best Results guide for placement</li>
+      <li><strong>Self-healing captions:</strong> phone call mid-session? Captions resume on their own. If recognition ever stalls, it restarts itself — and tells you, never fails silently</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Everywhere</h3>
+    <ul class="features">
+      <li><strong>100% on your phone:</strong> no account, no cloud, works in airplane mode</li>
+      <li><strong>Personal Word Bank:</strong> teach it the names, jargon, and terms that matter to you, and captions learn to get them right</li>
+      <li><strong>Fast ways in:</strong> home and lock screen widgets, Action Button, Siri, and Spotlight all launch straight into either mode</li>
+      <li><strong>Made to be read:</strong> dark and sepia themes, full Dynamic Type support, VoiceOver labels throughout, and every animation respects Reduce Motion</li>
+      <li><strong>Your transcripts, your call:</strong> sessions save to History, browsable and exportable — and you decide what to keep</li>
+    </ul>
+  </div>
 </section>
 
 <section id="beta" aria-labelledby="beta-h">
@@ -182,6 +278,39 @@
   <p><a href="changelog.html"><strong>See the full changelog</strong></a> for every release and hotfix, what changed, and what to test in each.</p>
 </section>
 
+<section id="fixes" aria-labelledby="fixes-h">
+  <h2 id="fixes-h">Fixes to come: what I know about</h2>
+  <p>An honest list. If you hit one of these, you don't need to report it (though a "me too" with a screenshot still helps me judge how much it hurts). If you hit something that <em>isn't</em> here, that's a report I need.</p>
+
+  <div class="card">
+    <h3>Known rough edges</h3>
+    <ul class="features">
+      <li><strong>The in-app tutorial is behind.</strong> Nothing it says is wrong, but it doesn't yet mention caption speed, the "hearing you" indicator, the audio status chips, the wand, or the Word Bank. Until the refreshed tour ships, this page's feature tour is the complete list</li>
+      <li><strong>Reply ideas can lose a fast exchange.</strong> At counter speed, suggestions sometimes arrive after the moment has passed, and "this or that?" questions don't always produce the actual choices as buttons. Both are being reworked</li>
+      <li><strong>Distance has a ceiling.</strong> The recent room-tuning update helps, but a phone mic several meters from a quiet speaker is a physics problem — for big rooms, closer placement or an external mic is still the honest answer</li>
+      <li><strong>On-device AI can be picky.</strong> Wrap-ups on everyday topics (health, religion, news) occasionally get declined by the phone's built-in model. You'll always get a clearly labeled basic extract instead of a dead end — but if you see it often, tell me</li>
+      <li><strong>Shake-to-clear</strong> for the composer is queued but not in yet</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Being built next</h3>
+    <p class="note">Filed, specced, and in order — no dates promised, because I don't ship guesses.</p>
+    <ul class="features">
+      <li><strong>Floating captions:</strong> keep captioning in a small window over other apps — including while it's tucked to the edge of the screen, so recalling it shows what's being said <em>now</em>, with nothing missed</li>
+      <li><strong>Save &amp; Start New:</strong> end one meeting and start the next without leaving the mode — back-to-back classes, one tap</li>
+      <li><strong>Silence markers:</strong> long quiet stretches marked in the transcript, so you can find the seams — speaker changes, breaks — when scrolling back. And honestly labeled: "quiet" and "interrupted" will never be confused</li>
+      <li><strong>Multi-select delete:</strong> clear a whole run of old transcripts at once, with a strong confirmation and an undo window</li>
+      <li><strong>Find anything later:</strong> search across all transcripts, folders, session renaming, and bookmarks you star live and jump to afterward</li>
+      <li><strong>Ask more of a saved session:</strong> different AI summary views — action items, decisions, study guide, "what did I miss?" — each linked back to the transcript line that supports it</li>
+      <li><strong>Word Bank 2.0:</strong> teach it what a word keeps being misheard <em>as</em>, and let it suggest terms it noticed so the bank builds itself</li>
+      <li><strong>Documentation-grade export:</strong> Markdown, PDF, and plain text with timestamps throughout</li>
+      <li><strong>More scenario packs, a light theme, and iPad layouts</strong></li>
+    </ul>
+    <p class="note">Further out — speaker labels, sound captions, translation — lives in the <a href="#wishlist">wish list</a> conversation, and your input there genuinely steers it.</p>
+  </div>
+</section>
+
 <section id="wishlist" aria-labelledby="wishlist-h">
   <h2 id="wishlist-h">Wish list: tell me what you want</h2>
   <div class="card">
@@ -238,6 +367,30 @@
   <p>EchoSight is built by a Deaf developer, tested by the Deaf and hard-of-hearing community, and designed so the burden of communication access doesn't fall on the person with the disability.</p>
   <p>© 2026 Frank Griffin · <a href="mailto:frank@griffized.com">frank@griffized.com</a></p>
 </footer>
+
+<script>
+  // Scrollspy for the left panel: highlight the section currently in view.
+  (function () {
+    var links = document.querySelectorAll('.sidenav a[href^="#"]');
+    if (!links.length || !('IntersectionObserver' in window)) return;
+    var map = {};
+    links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+    var current = null;
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          if (current) current.removeAttribute('aria-current');
+          current = map[e.target.id];
+          if (current) current.setAttribute('aria-current', 'true');
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    Object.keys(map).forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+  })();
+</script>
 
 </body>
 </html>
