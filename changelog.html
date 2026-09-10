@@ -67,6 +67,25 @@
 <main id="main">
 
 <article>
+  <!-- Replace "Coming to TestFlight" with the ship date when the build goes out. -->
+  <p class="meta">Coming to TestFlight <span class="tag">Major update</span></p>
+  <h2>Beta 2.1: ask more of a saved session</h2>
+  <p><strong>Why:</strong> a transcript is not the finish line. A 50-minute lecture is only useful if it can become a study guide, and a saved meeting is only useful if you can ask it questions afterward. Testers were clear about that. At the same time, two real exports showed the AI wrap-up doing something worse than missing things: it stated a number that was never said. This release takes on both.</p>
+  <p><strong>What changed:</strong></p>
+  <ul>
+    <li><strong>Lenses:</strong> open any saved session in History and ask for a study guide, a quiz, a vocabulary list, action items, decisions, key points, "what did I miss?", and more. Fourteen lenses in all. Every item shows the transcript lines it came from: tap <em>Show evidence</em> and the transcript scrolls to them, highlighted</li>
+    <li><strong>What did I miss?</strong> during a live meeting, the clock button in the header gives a quick catch-up of the last stretch without stopping the captions</li>
+    <li><strong>Honest wrap-ups:</strong> when audio quality was poor for much of a session, the wrap-up says so at the top, and action items and decisions are shown as said rather than reworded. Lines the phone couldn't hear well are marked [unclear] instead of guessed at</li>
+    <li><strong>Numbers stay where they were said:</strong> a wrap-up now drops any figure that doesn't appear in the transcript in the sentence it came from, instead of rewording it. Fewer items, none invented</li>
+    <li><strong>Face them:</strong> in Conversation Mode, one tap flips your side of the screen so the person across the table can read it without you turning the phone around. Tap your text to flip it back</li>
+    <li><strong>Conversation tutorial refreshed:</strong> two sides of the screen, handing them the phone, send versus speak, and reply ideas are all covered now</li>
+    <li><strong>Under the hood:</strong> saved sessions moved to a storage layout built for long sessions, so History stays quick as your transcripts pile up. Existing sessions migrate on first launch. Nothing to do on your end</li>
+  </ul>
+  <p class="note">Lenses and wrap-ups need Apple Intelligence (iPhone 15 Pro and newer on iOS 26). Captions, Conversation Mode, Face them, and saved transcripts work on every supported iPhone.</p>
+  <p><strong>Please test:</strong> record a class or a long meeting, then open it in History and run the Study guide and Quiz lenses. Tap <em>Show evidence</em> on a few items and tell me whether it jumped to the right lines. Count how many items say "No supporting lines cited." If a wrap-up gets flagged for audio quality, tell me whether the flag felt fair for the room you were in. And if you spot a number in any summary that wasn't actually said, that's the report I most want.</p>
+</article>
+
+<article>
   <p class="meta">August 6, 2026 <span class="tag">Hotfix</span></p>
   <h2>Beta 2.0.2: hearing across the room</h2>
   <p><strong>Why:</strong> testers reported weak pickup of conversation a few feet away. Part of that is physics, but part was us: meeting mode was running audio through phone-call-style noise filtering that can treat a distant speaker as background noise.</p>
