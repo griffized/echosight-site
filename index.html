@@ -115,7 +115,7 @@
 <header>
   <p class="wordmark">EchoSight</p>
   <h1>See the conversation. Join the conversation. Keep the conversation.</h1>
-  <p class="lead">EchoSight is a Deaf-first communication assistant for iPhone. Live captions, two-way face-to-face conversation, and saved transcripts, all processed on your phone. No account. No cloud. No transcript ever leaves your device.</p>
+  <p class="lead">EchoSight is a Deaf-first communication assistant for iPhone. Live captions, two-way face-to-face conversation, and saved transcripts, all processed on your phone. No account needed. Nothing leaves your device unless you choose a Cloud lens for one session, and the app tells you exactly what is sent.</p>
   <nav aria-label="Sections">
     <ul>
       <li><a href="#about">Why I built this</a></li>
@@ -202,7 +202,10 @@
       <li><strong>Name alerts:</strong> a strong vibration when your name is spoken, including the ways people mispronounce it (you teach it the variants)</li>
       <li><strong>AI wrap-up:</strong> summary, key points, action items, and decisions at session end, or generate one later from History. Made on your phone, never uploaded</li>
       <li><strong>Wrap-ups that admit their limits:</strong> if the audio was poor for much of the session, the wrap-up says so at the top and shows action items and decisions as said rather than reworded. Numbers are kept only when they appear in the transcript, in the sentence they came from. Lines the phone couldn't hear well are marked [unclear]</li>
-      <li><strong>Lenses:</strong> open any saved session in History and ask for a study guide, quiz, vocabulary list, action items, decisions, key points, or "what did I miss?" Fourteen lenses, each item with a <em>Show evidence</em> button that scrolls the transcript to the lines it came from. Run as many as you like; they're saved with the session</li>
+      <li><strong>Notes at the moment:</strong> tap <em>Add a note at this moment</em> while a meeting runs, type your thought, and it lands in the transcript exactly where you tapped, in orange, even if people kept talking while you typed. Afterward, touch and hold any line in a saved session to add a note after it. Notes feed every lens, and <em>My notes, expanded</em> turns each one into what was said around it</li>
+      <li><strong>Lenses:</strong> open any saved session in History and ask for a study guide, quiz, vocabulary list, action items, decisions, key points, or "what did I miss?" Fourteen lenses. Tick several, or a pack (Class pack, Meeting pack), and run them once; each result is saved with the session. Every item shows the lines it came from as <em>Lines 212 to 231, tap to verify</em>, and the transcript scrolls there</li>
+      <li><strong>Quiz me, properly:</strong> eight questions in four types (multiple choice, multiple answer, true or false, short answer) with the answers hidden until you check them. Tap an option to commit before you look</li>
+      <li><strong>On this phone or Cloud:</strong> every lens can run on the phone (free, private, works offline) or, if you turn Cloud lenses on in Settings, in the cloud for a deeper answer. Each result carries a badge saying where it ran. Nothing is sent until you choose Cloud for that session and confirm</li>
       <li><strong>What did I miss?</strong> the clock button in the live meeting header gives a quick catch-up of the last stretch without stopping the captions</li>
       <li><strong>Audio status chips:</strong> Bluetooth mic connected, too much noise, speaker may be too far, plus a Best Results guide for placement</li>
       <li><strong>Self-healing captions:</strong> phone call mid-session? Captions resume on their own. If recognition ever stalls, it restarts itself and tells you. It never fails silently</li>
@@ -212,10 +215,12 @@
   <div class="card">
     <h3>Everywhere</h3>
     <ul class="features">
-      <li><strong>100% on your phone:</strong> no account, no cloud, works in airplane mode</li>
+      <li><strong>On your phone by default:</strong> captions, conversation, wrap-ups and lenses all work in airplane mode. Cloud lenses are optional and off until you turn them on</li>
       <li><strong>Personal Word Bank:</strong> teach it the names, jargon, and terms that matter to you, and captions learn to get them right</li>
       <li><strong>Fast ways in:</strong> home and lock screen widgets, Action Button, Siri, and Spotlight all launch straight into either mode</li>
-      <li><strong>Made to be read:</strong> dark and sepia themes, full Dynamic Type support, VoiceOver labels throughout, and every animation respects Reduce Motion</li>
+      <li><strong>Made to be read:</strong> a new typeface designed for low-vision legibility, light and dark looks that follow your phone (or pick one under Appearance), full Dynamic Type support, VoiceOver labels throughout, and every animation respects Reduce Motion</li>
+      <li><strong>One color language:</strong> orange is you (your replies, your notes, your name being mentioned), blue is incoming speech, teal means EchoSight is listening, ready, or showing you evidence, and red is kept for real problems</li>
+      <li><strong>A PDF worth keeping:</strong> share any saved session as a clean EchoSight document: the wrap-up, every saved lens with its line references, your notes, and the numbered transcript with time stamps. Plain text is still there too</li>
       <li><strong>Your transcripts, your call:</strong> sessions save to History, browsable and exportable, and you decide what to keep</li>
     </ul>
   </div>
@@ -237,7 +242,7 @@
       <li><strong>First launch:</strong> allow microphone access, since captions can't happen without it. If your iPhone supports Apple Intelligence, turn it on (iPhone Settings → Apple Intelligence &amp; Siri): captions work without it, but the AI wrap-ups, lenses, and reply suggestions need it.</li>
       <li><strong>Two minutes well spent:</strong> add your name and words you hear a lot (coworkers, jargon, medications) in EchoSight Settings → Word Bank. It genuinely improves accuracy.</li>
     </ol>
-    <p><strong>Your personal iPhone is the right phone.</strong> EchoSight runs entirely on the device and works offline, and nothing you caption ever leaves it. No work-phone approvals needed; use it anywhere, including at work.</p>
+    <p><strong>Your personal iPhone is the right phone.</strong> EchoSight runs on the device and works offline, and nothing you caption leaves it unless you choose a Cloud lens for a session. No work-phone approvals needed; use it anywhere, including at work.</p>
     <p><strong>Sending feedback is two taps:</strong> take a screenshot in the app, tap the screenshot, then choose <em>Share Beta Feedback</em>. It comes straight to me with the context attached. Bigger thoughts belong in the <a href="#wishlist">wish list</a>, and plain email or a text always works.</p>
   </div>
 </section>
@@ -254,8 +259,32 @@
 
   <div class="card">
     <h3>The study guide test</h3>
-    <p>Record a class, a training session, or a long lecture video in Meeting Mode. Afterward, open it in History and tap Lenses. Run Study guide, then Quiz, then Vocabulary. Tap <em>Show evidence</em> on a few items and watch where the transcript jumps.</p>
-    <p class="note">Tell me: did the evidence land on the right lines? How many items said "No supporting lines cited"? Did the study guide cover what you'd have written down yourself, and did it leave out anything you needed? If a wrap-up or lens carried an audio-quality flag, did the flag feel fair?</p>
+    <p>Record a class, a training session, or a long lecture video in Meeting Mode. Afterward, open it in History and tap Lenses. Tap <em>Class pack</em> and run it once. Open the study guide and tap <em>Lines</em> on a few items to watch where the transcript jumps. Then open Quiz me and answer a few before checking.</p>
+    <p class="note">Tell me: did the evidence land on the right lines? Could you tell whether each lens ran on the phone or in the cloud? Did the study guide cover what you'd have written down yourself? Were the quiz answers really hidden until you checked, and were the questions fair to the lecture?</p>
+  </div>
+
+  <div class="card">
+    <h3>The note test</h3>
+    <p>During a meeting, tap <em>Add a note at this moment</em> when something matters, type a few words while people keep talking, and save. Afterward, run <em>My notes, expanded</em> on that session.</p>
+    <p class="note">Tell me: did the note land where you expected in the transcript, before or after the words that were said while you typed? Did captions keep going while you wrote? Did the expanded note say what was actually being discussed at that moment?</p>
+  </div>
+
+  <div class="card">
+    <h3>The cloud test</h3>
+    <p>In Settings, turn on Cloud lenses and read <em>How cloud lenses work</em>. Then run one lens in the cloud on a long session and the same lens on the phone, and compare.</p>
+    <p class="note">Tell me: was it clear what would be sent before you agreed? Did the wait feel acceptable for the length of the session? Was the cloud answer worth it compared with the phone's? Did you notice the badge saying where each result came from?</p>
+  </div>
+
+  <div class="card">
+    <h3>The light and dark test</h3>
+    <p>Settings offers Appearance: System, Light, or Dark. Use Light in daylight and Dark in a dim room, in both modes, for at least one real session each.</p>
+    <p class="note">Tell me: which one did you leave it on? Could you tell when EchoSight was listening? Could you tell why a line was highlighted? Was anything harder to read than before?</p>
+  </div>
+
+  <div class="card">
+    <h3>The PDF test</h3>
+    <p>Open a saved session, tap Share, choose <em>Share as PDF</em>, and open it in Files or send it to yourself.</p>
+    <p class="note">Tell me: could you find the wrap-up, the lenses, your notes, and the transcript without hunting? Do the line references in the lenses match the numbered lines below? Would you hand this to a classmate or a colleague as is?</p>
   </div>
 
   <div class="card">
@@ -293,7 +322,8 @@
       <li><strong>Siri and Spotlight:</strong> "Start a conversation in EchoSight" or "Start a meeting in EchoSight" works from Siri, and both appear when you search in Spotlight</li>
       <li><strong>Quick phrases:</strong> in Conversation Mode, open the phrases panel. Install a scenario pack (Restaurant, Doctor and Pharmacy, Travel, Emergency and more). Send the same message three times and EchoSight offers to save it as a phrase</li>
       <li><strong>The hearing-person sheet:</strong> the person icon at the top of Conversation Mode gathers everything meant for the other person in one place</li>
-      <li><strong>Themes:</strong> Settings offers dark and sepia. Sepia exists because testers asked for dark text on warm paper. Try both in daylight</li>
+      <li><strong>Appearance:</strong> Settings offers System, Light, and Dark. Light is dark ink on warm paper, which is where the old Sepia went. Try both in daylight</li>
+      <li><strong>The testing card:</strong> Home shows what this build is testing, and ticks each item off as you do it. It lives on this phone only</li>
     </ul>
   </div>
 </section>
@@ -303,8 +333,8 @@
   <article class="update">
     <!-- Replace "Coming to TestFlight" with the ship date when the build goes out. -->
     <p class="date">Coming to TestFlight · Major update</p>
-    <h3>Beta 2.1: ask more of a saved session</h3>
-    <p>Lenses turn any saved session into a study guide, quiz, vocabulary list, action items, decisions, or a "what did I miss?" catch-up, and every item links to the transcript lines it came from. Wrap-ups now say when the audio was too poor to trust and never keep a number that wasn't in the transcript. Conversation Mode gained Face them: one tap flips your side toward the other person. If you take classes or sit in long meetings, this one is for you.</p>
+    <h3>Beta 2.1: a clearer EchoSight, and more to ask of a session</h3>
+    <p>A new look, light and dark, built around one rule: each color means one thing. Notes you add at the moment, during or after a meeting. Lenses you can run several at a time, on the phone or, if you choose, in the cloud, with a badge on every result saying where it ran. A quiz that keeps its answers hidden. A PDF you would hand to someone. Plus everything from the first 2.1 build: evidence links on every lens item, wrap-ups that admit their limits, and Face them in Conversation Mode. If you take classes or sit in long meetings, this one is for you.</p>
   </article>
   <p><a href="changelog.html"><strong>See the full changelog</strong></a> for every release and hotfix, what changed, and what to test in each.</p>
 </section>
@@ -322,6 +352,9 @@
       <li><strong>Reply ideas can lose a fast exchange.</strong> At counter speed, suggestions sometimes arrive after the moment has passed, and "this or that?" questions don't always produce the actual choices as buttons. Both are being reworked</li>
       <li><strong>Distance has a ceiling.</strong> The recent room-tuning update helps, but a phone mic several meters from a quiet speaker is a physics problem. For big rooms, closer placement or an external mic is still the honest answer</li>
       <li><strong>On-device AI can be picky.</strong> Wrap-ups on everyday topics (health, religion, news) occasionally get declined by the phone's built-in model. You'll always get a clearly labeled basic extract instead of a dead end, but if you see it often, tell me</li>
+      <li><strong>Cloud runs are capped at 20 a day per tester,</strong> and a pack of four lenses is four runs. Each run on a long session costs real money, which EchoSight pays during the beta. The count resets at midnight UTC. <em>How cloud lenses work</em> in Settings explains the rest</li>
+      <li><strong>Quiz layout can drift.</strong> Once in a while the model ignores the question format and the quiz shows as plain question-and-answer text, answers visible. Run it again and it usually comes back right. A screenshot of a drifted one helps</li>
+      <li><strong>Send versus speak is still a chip.</strong> The mode chip under Send stays for this build; separate Show and Say it buttons are next</li>
       <li><strong>Shake-to-clear</strong> for the composer is queued but not in yet</li>
     </ul>
   </div>
@@ -337,11 +370,10 @@
       <li><strong>Find anything later:</strong> search across all transcripts, folders, session renaming, and bookmarks you star live and jump to afterward</li>
       <li><strong>Focus marks:</strong> while a lecture is running, flag a term or topic you need explained. The study guide lens then defines it and gives it extra attention</li>
       <li><strong>Wrap-up layouts:</strong> choose what a shared wrap-up contains: full transcript plus summary, summary plus to-do list, or transcript only</li>
-      <li><strong>A medical-conversation reminder:</strong> when the app notices a medical appointment is being discussed, it reminds you that captions and summaries are not authoritative and never replace direct communication, including an ASL interpreter</li>
       <li><strong>Word Bank 2.0:</strong> teach it what a word keeps being misheard <em>as</em>, and let it suggest terms it noticed so the bank builds itself</li>
-      <li><strong>Optional cloud lenses:</strong> deeper summaries from a more capable model, opt-in per session, transcript only (never audio), and off by default. See the privacy section for the rules that will apply</li>
-      <li><strong>Documentation-grade export:</strong> Markdown, PDF, and plain text with timestamps throughout</li>
-      <li><strong>More scenario packs, a light theme, and iPad layouts</strong></li>
+      <li><strong>Show and Say it:</strong> two explicit buttons in Conversation Mode instead of a send button plus a mode chip, so what you tap is what happens</li>
+      <li><strong>Speaker labels:</strong> Speaker 1, Speaker 2, in color, once the phone can tell voices apart reliably. Until then, rails mark where a voice probably changed, never who</li>
+      <li><strong>More scenario packs and iPad layouts</strong></li>
     </ul>
     <p class="note">Further out (speaker labels, sound captions, translation) lives in the <a href="#wishlist">wish list</a> conversation, and your input there genuinely steers it.</p>
   </div>
@@ -389,10 +421,15 @@
 <section id="privacy" aria-labelledby="privacy-h">
   <h2 id="privacy-h">Privacy</h2>
   <div class="card">
-    <p class="promise">Private by default. No transcript leaves your device.</p>
-    <p>EchoSight's captioning, speech, and AI features run entirely on your iPhone. There are no accounts, no servers, and no network connection required; the app works in airplane mode. Your transcripts are stored only on your phone, you decide what to keep, and export happens only when you choose it.</p>
+    <p class="promise">Private by default. Nothing leaves your device unless you choose it, one session at a time.</p>
+    <p>EchoSight's captioning, speech, wrap-ups, and lenses run entirely on your iPhone. No account is needed, no network connection is required, and the app works in airplane mode. Your transcripts are stored only on your phone, you decide what to keep, and export happens only when you choose it.</p>
     <p>EchoSight includes offline and local-only operation designed to support privacy-sensitive use. Whether use is appropriate in any specific setting, under HIPAA, FERPA, workplace, school, or clinical policies, remains the responsibility of users and their institutions.</p>
-    <p>If optional cloud features ever ship, they will be exactly that: optional, off by default, opt-in per session, with plain-language disclosure of what is sent and user-controlled deletion. The offline core will never require them.</p>
+    <h3>Cloud lenses, plainly</h3>
+    <p><strong>Off by default.</strong> Cloud lenses do nothing until you turn them on in Settings, and even then nothing is sent until you choose Cloud for a specific session and answer a consent sheet for it.</p>
+    <p><strong>What is sent:</strong> the transcript text of that one session, plus any notes you added to it. Never audio; EchoSight never records audio, so there is none to send. <strong>Where it goes:</strong> to EchoSight's own server, which checks that you are a signed-in tester (Sign in with Apple, which shares nothing but a random identifier), passes the text to a more capable language model, returns the result, and keeps no copy. The model provider is bound by terms that forbid training on your data. Providers are referred to by letter during the beta so results can be compared fairly.</p>
+    <p><strong>What never goes:</strong> sessions in Compliance Mode, sessions that mention medical care, and sessions you chose not to save. Every cloud result carries a Cloud badge in the app and in the PDF, so you always know which parts of a record were made where.</p>
+    <p><strong>Limits and cost:</strong> reading a three-hour transcript is tens of thousands of words for the model, and each run costs EchoSight real money. During the beta EchoSight pays, and each tester gets 20 cloud runs a day (a pack of four lenses is four runs). On-phone lenses will stay free after the beta; cloud lenses are expected to become part of a paid Enhanced plan with a monthly allowance. Nothing about that is final, and testers will hear first.</p>
+    <p><strong>Deletion:</strong> the server stores nothing, so there is nothing on it to delete. Results are saved only on your phone, with the session, and go when you delete the session.</p>
     <p class="note">Questions about privacy, or anything else: <a href="mailto:frank@griffized.com">frank@griffized.com</a></p>
   </div>
 </section>
